@@ -3,9 +3,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.sky.lms_web_service.mapper.ProgressMapper">
+<mapper namespace="com.sky.shop.mapper.ProgressMapper">
 
-    <insert id="saveVideoProgress" parameterType="com.sky.lms_web_service.dto.Section_Progress">
+    <insert id="saveVideoProgress" parameterType="com.sky.shop.dto.Section_Progress">
         INSERT INTO section_progress (con_num, lec_num, user_no, learning_time, max_s)
         VALUES (#{conNum}, #{lecNum}, #{userNo}, ROUND(#{learningTime}, 2), #{maxS})
             ON DUPLICATE KEY UPDATE

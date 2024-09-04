@@ -3,20 +3,20 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.sky.lms_web_service.mapper.ChapterMapper">
+<mapper namespace="com.sky.shop.mapper.ChapterMapper">
 
-    <select id="findAllChapters" resultType="com.sky.lms_web_service.dto.Chapter">
+    <select id="findAllChapters" resultType="com.sky.shop.dto.Chapter">
         SELECT * FROM chapter
         WHERE con_num = #{conNum}
     </select>
 
 
-    <select id="selectChapter" resultType="com.sky.lms_web_service.dto.Chapter">
+    <select id="selectChapter" resultType="com.sky.shop.dto.Chapter">
         SELECT * FROM chapter
         WHERE chap_num = #{chapNum}
     </select>
 
-    <insert id="saveChapter" parameterType="com.sky.lms_web_service.dto.Chapter">
+    <insert id="saveChapter" parameterType="com.sky.shop.dto.Chapter">
         INSERT INTO chapter (con_num, lec_num, chap_name, chap_start_time)
         VALUES
         (
@@ -27,7 +27,7 @@
         )
     </insert>
 
-    <update id="updateChapter" parameterType="com.sky.lms_web_service.dto.Chapter">
+    <update id="updateChapter" parameterType="com.sky.shop.dto.Chapter">
         <![CDATA[
 	    UPDATE chapter SET
 		chap_name = #{chapName},
@@ -42,12 +42,12 @@
 	]]>
     </delete>
 
-    <select id="getContentByNum" parameterType="String" resultType="com.sky.lms_web_service.dto.Chapter">
+    <select id="getContentByNum" parameterType="String" resultType="com.sky.shop.dto.Chapter">
         <![CDATA[
             SELECT * FROM chapter WHERE chap_num = #{chapNum}
         ]]>
     </select>
-    <select id="selectChapterByConNum" parameterType="String" resultType="com.sky.lms_web_service.dto.Chapter">
+    <select id="selectChapterByConNum" parameterType="String" resultType="com.sky.shop.dto.Chapter">
         SELECT * FROM chapter WHERE con_num = #{conNum}
     </select>
 
