@@ -18,6 +18,7 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-configuration-processor'
+    implementation 'mysql:mysql-connector-java:8.0.26'
 
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     implementation 'org.springframework.boot:spring-boot-starter-tomcat'
@@ -40,7 +41,6 @@ dependencies {
     //jpa
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     //mariaDB
-    implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '3.3.3'
     //파일등록
     implementation 'commons-io:commons-io:2.11.0'
     //lombok
